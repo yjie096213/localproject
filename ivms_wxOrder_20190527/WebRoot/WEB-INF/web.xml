@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+	<context-param>
+		<param-name>config-file</param-name>
+		<param-value>/quartz.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>shutdown-on-unload</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<listener>
+		<listener-class>
+			org.quartz.ee.servlet.QuartzInitializerListener
+		</listener-class>
+	</listener>
+	<servlet> 
+		<servlet-name>SynSevlet</servlet-name> 
+    	<servlet-class>com.htinf.web.WebServlet</servlet-class> 
+    </servlet>
+  	<servlet-mapping> 
+    	<servlet-name>SynSevlet</servlet-name> 
+    	<url-pattern>/send</url-pattern> 
+    </servlet-mapping>
+</web-app>

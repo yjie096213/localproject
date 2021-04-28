@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+  <service>
+    <serviceClass>org.tempuri.WsGetZfJbxxAllImpl</serviceClass>
+    <wsdlURL>http://jg.lhjy.gov.cn:7791/WebService/WsGetZfJbxxAll.asmx?WSDL</wsdlURL>
+    <serviceFactory>org.codehaus.xfire.jaxb2.JaxbServiceFactory</serviceFactory>
+  </service>
+</beans>
+

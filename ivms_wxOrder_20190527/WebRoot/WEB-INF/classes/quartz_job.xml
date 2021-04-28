@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_2_0.xsd"
+  version="2.0">
+    <schedule>
+        <!-- cron-expression 配置说明 -->
+		<!-- 秒 分 时 日 月 星 年（可选的域）--> 
+		<!-- 如：0 30 22 * * ? 表示每天的22:30:00启动任务 -->
+		<job>
+            <name>job_CheckVisitorFromWeiXin</name>
+            <group>DEFAULT_JOB_GROUP</group>
+            <description>调用微信接口获取亲属信息并审核，启动时间建议配成：0 */1 * * * ?</description>
+            <job-class>com.htinf.job.CheckVisitorFromWeiXin</job-class>
+        </job>
+        <trigger>
+            <cron>
+                <name>trigger_CheckVisitorFromWeiXin</name>
+                <group>DEFAULT_TRIGGER_GROUP</group>
+                <job-name>job_CheckVisitorFromWeiXin</job-name>
+                <job-group>DEFAULT_JOB_GROUP</job-group>
+                <cron-expression>0 0/10 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        
+        <job>
+            <name>job_GetOrderFromWeiXin</name>
+            <group>DEFAULT_JOB_GROUP</group>
+            <description>调用微信接口获取预约信息，启动时间建议配成：0 */1 * * * ?</description>
+            <job-class>com.htinf.job.GetOrderFromWeiXin</job-class>
+        </job>
+        <trigger>
+            <cron>
+                <name>trigger_GetOrderFromWeiXin</name>
+                <group>DEFAULT_TRIGGER_GROUP</group>
+                <job-name>job_GetOrderFromWeiXin</job-name>
+                <job-group>DEFAULT_JOB_GROUP</job-group>
+                <cron-expression>0 0/10 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        
+        <job>
+            <name>job_UpdateAreaForOrder</name>
+            <group>DEFAULT_JOB_GROUP</group>
+            <description>同步微信预约信息中人员所在分监狱，启动时间建议配成：0 */1 * * * ?</description>
+            <job-class>com.htinf.job.UpdateAreaForOrder</job-class>
+        </job>
+        <trigger>
+            <cron>
+                <name>trigger_UpdateAreaForOrder</name>
+                <group>DEFAULT_TRIGGER_GROUP</group>
+                <job-name>job_UpdateAreaForOrder</job-name>
+                <job-group>DEFAULT_JOB_GROUP</job-group>
+                <cron-expression>0 0/10 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+       
+    </schedule>
+</job-scheduling-data>

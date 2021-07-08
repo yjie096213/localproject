@@ -1,0 +1,109 @@
+2021-07-05 17:22:32.932 [http-nio-8081-exec-3] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM serviceType WHERE 1 = 1 AND name = ?
+2021-07-05 17:22:33.209 [http-nio-8081-exec-3] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 服务1(String)
+2021-07-05 17:25:14.943 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1 AND name = ?
+2021-07-05 17:25:15.234 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 服务1(String)
+2021-07-05 17:25:15.500 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:25:15.519 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 AND name = ? ORDER BY id DESC LIMIT ?
+2021-07-05 17:25:15.521 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 服务1(String), 10(Integer)
+2021-07-05 17:26:53.528 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1 AND unid = ? AND name = ?
+2021-07-05 17:26:53.832 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 0(Long), 服务1(String)
+2021-07-05 17:26:54.028 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:27:53.855 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1 AND unid = ?
+2021-07-05 17:27:54.145 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 0(Long)
+2021-07-05 17:27:54.357 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:29:50.983 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:29:51.262 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:29:51.453 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:29:51.474 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?
+2021-07-05 17:29:51.475 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer)
+2021-07-05 17:29:51.498 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 17:31:22.949 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:31:22.951 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:31:22.956 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:31:22.976 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?
+2021-07-05 17:31:22.978 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer)
+2021-07-05 17:31:23.038 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 17:37:46.778 [http-nio-8081-exec-4] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:37:46.779 [http-nio-8081-exec-4] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:37:46.782 [http-nio-8081-exec-4] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:37:46.785 [http-nio-8081-exec-4] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 17:37:46.787 [http-nio-8081-exec-4] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 17:37:46.799 [http-nio-8081-exec-4] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 17:41:46.730 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:41:46.758 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:41:46.778 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:41:46.784 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 17:41:46.784 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 17:41:46.790 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 17:48:19.609 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:48:19.638 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:48:19.662 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:48:19.669 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 17:48:19.669 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 17:48:19.675 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 17:58:20.121 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 17:58:20.150 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 17:58:20.339 [http-nio-8081-exec-2] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 17:58:20.346 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 17:58:20.347 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 17:58:20.355 [http-nio-8081-exec-2] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:00:47.719 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:00:47.976 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:00:48.209 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:00:48.231 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:00:48.233 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:00:48.255 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:06:08.292 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:06:08.563 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:06:08.756 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:06:08.777 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:06:08.779 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:06:08.799 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:07:38.281 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:07:38.306 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:07:38.326 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:07:38.332 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:07:38.333 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:07:38.452 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:09:03.799 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:09:03.826 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:09:03.847 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:09:03.853 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:09:03.854 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:09:03.859 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:09:30.174 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:09:30.203 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:09:30.225 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:09:30.232 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:09:30.233 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:09:30.238 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:10:19.460 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:10:19.491 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:10:19.511 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:10:19.517 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:10:19.518 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:10:19.524 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:12:50.385 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:12:50.413 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:12:50.435 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:12:50.560 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:12:50.560 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:12:50.567 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 18:14:08.426 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 18:14:08.451 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 18:14:08.471 [http-nio-8081-exec-1] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 18:14:08.477 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 18:14:08.478 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 18:14:08.484 [http-nio-8081-exec-1] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 20:02:46.346 [http-nio-8081-exec-3] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 20:02:46.377 [http-nio-8081-exec-3] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 20:02:46.400 [http-nio-8081-exec-3] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 20:02:46.408 [http-nio-8081-exec-3] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?, ?
+2021-07-05 20:02:46.409 [http-nio-8081-exec-3] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer), 10(Integer)
+2021-07-05 20:02:46.415 [http-nio-8081-exec-3] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10
+2021-07-05 20:04:25.518 [http-nio-8081-exec-5] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==>  Preparing: SELECT count(0) FROM t_sm_service_type WHERE 1 = 1
+2021-07-05 20:04:25.518 [http-nio-8081-exec-5] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - ==> Parameters: 
+2021-07-05 20:04:25.519 [http-nio-8081-exec-5] DEBUG c.h.s.dao.ServiceTypeDao.selectAllServerType_COUNT - <==      Total: 1
+2021-07-05 20:04:25.521 [http-nio-8081-exec-5] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==>  Preparing: SELECT unid, uuid, name, ifCluster, ifShow, clusterSC, create_time, update_time, status FROM t_sm_service_type WHERE 1 = 1 ORDER BY unid DESC LIMIT ?
+2021-07-05 20:04:25.521 [http-nio-8081-exec-5] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - ==> Parameters: 10(Integer)
+2021-07-05 20:04:25.528 [http-nio-8081-exec-5] DEBUG c.htinf.sm.dao.ServiceTypeDao.selectAllServerType - <==      Total: 10

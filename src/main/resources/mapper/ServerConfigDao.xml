@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件必须和相应的Dao接口文件同名，并在同一路径下 -->
+<mapper namespace="com.htinf.sm.dao.ServerConfigDao">
+
+    <select id="selectAllServerConfig" parameterType="com.htinf.sm.model.ServerConfig" resultType="com.htinf.sm.model.ServerConfig">
+        SELECT
+            unid,
+            uuid,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            sftpPort,
+            create_time,
+            update_time,
+            status
+        FROM
+            t_sm_server_config
+        <where>
+            1 = 1
+            <if test="unid != null and unid != '' ">
+                AND unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND uuid = #{uuid}
+            </if>
+            <if test="serverIp != null and serverIp != ''">
+                AND serverIp = #{serverIp}
+            </if>
+            <if test="userName != null and userName != ''">
+                AND userName = #{userName}
+            </if>
+            <if test="status != null ">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY unid DESC
+    </select>
+
+    <select id="selectServerConfigDetail" parameterType="com.htinf.sm.model.ServerConfig" resultType="com.htinf.sm.model.ServerConfig">
+        SELECT
+            unid,
+            uuid,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            sftpPort,
+            create_time,
+            update_time,
+            status
+        FROM
+            t_sm_server_config
+        <where>
+            1 = 1
+            <if test="unid != null and unid != '' ">
+                AND unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND uuid = #{uuid}
+            </if>
+            <if test="serverIp != null and serverIp != ''">
+                AND serverIp = #{serverIp}
+            </if>
+            <if test="userName != null and userName != ''">
+                AND userName = #{userName}
+            </if>
+            <if test="status != null ">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY unid DESC
+        LIMIT 1
+    </select>
+
+    <insert id="insertServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        INSERT INTO t_sm_server_config
+        (
+            uuid,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            sftpPort
+        )
+            VALUES
+        (
+            #{uuid},
+            #{serverIp},
+            #{userName},
+            #{password},
+            #{sshPort},
+            #{sftpPort}
+        )
+    </insert>
+
+    <update id="deleteServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        UPDATE t_sm_server_config SET status = 1 WHERE uuid = #{uuid}
+    </update>
+
+    <update id="updateServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        UPDATE
+            t_sm_server_config
+        SET
+            serverIp = #{serverIp},
+            userName = #{userName},
+            password = #{password},
+            sshPort = #{sshPort},
+            sftpPort = #{sftpPort}
+        WHERE
+            uuid = #{uuid}
+    </update>
+
+</mapper>

@@ -1,0 +1,46 @@
+package com.htinf.sm.controller;
+
+import com.htinf.sm.model.ServiceType;
+import com.htinf.sm.service.ServiceTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @ClassName: ServiceTypeController
+ * @ProjectName: service_manage
+ * @Description: 服务类型相关controller
+ * @Author: Administrator
+ * @DATE: 2021/7/3 9:37
+ **/
+
+@RestController
+@RequestMapping("serviceType")
+public class ServiceTypeController {
+
+    @Autowired
+    private ServiceTypeService serviceTypeService;
+
+    /**
+     * @ClassName:   selectAllServerType
+     * @Description: TODO(描述这个方法的作用) 获取所有服务类型信息
+     * @Params:      [serviceType]
+     * @Return:      java.util.List<com.htinf.sm.model.ServiceType>
+     * @DATE:        2021/7/3 11:10
+     * @Author:      Administrator
+     **/
+    @RequestMapping(value = "selectAll.do", method = RequestMethod.POST)
+    public List<ServiceType> selectAllServerType(@ModelAttribute("serviceType") ServiceType serviceType) {
+        System.out.println(serviceType.getName());
+        System.out.println(serviceType.getClusterSC());
+        List<ServiceType> list = new ArrayList<>();
+        list = serviceTypeService.selectAllServerType(serviceType);
+        return list;
+    }
+
+}

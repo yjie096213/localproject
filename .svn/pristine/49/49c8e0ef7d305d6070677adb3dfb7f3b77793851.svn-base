@@ -1,0 +1,28 @@
+package com.htinf.server.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @ClassName: ServerTypeController
+ * @ProjectName: server_manage
+ * @Description: 服务类型相关controller
+ * @Author: Administrator
+ * @DATE: 2021/7/3 9:37
+ **/
+
+@RestController
+@RequestMapping("serverType")
+public class ServerTypeController {
+
+    @RequestMapping("selectAll.do")
+    public Map selectAllServerType() {
+        Map map = new HashMap();
+        map.put("1","ecshi ");
+        return map;
+    }
+
+}

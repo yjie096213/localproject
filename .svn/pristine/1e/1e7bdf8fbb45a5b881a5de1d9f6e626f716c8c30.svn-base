@@ -1,0 +1,45 @@
+package com.htinf.sm.controller;
+
+import com.htinf.sm.common.model.ResultValue;
+import com.htinf.sm.model.DeviceConfig;
+import com.htinf.sm.model.ServiceType;
+import com.htinf.sm.service.DeviceConfigService;
+import com.htinf.sm.service.ServiceTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+
+/**
+ * @ClassName: DeviceConfigController
+ * @ProjectName: service_manage
+ * @Description: 第三方设备管理controller
+ * @Author: Administrator
+ * @DATE: 2021/7/3 9:37
+ **/
+
+@RestController
+@RequestMapping("deviceConfig")
+public class DeviceConfigController {
+
+    @Autowired
+    private DeviceConfigService deviceConfigService;
+
+    /**
+     * @ClassName:   DeviceConfigController
+     * @Description: TODO(描述这个方法的作用) 获取所有服务类型信息
+     * @Params:      [deviceConfig]
+     * @Return:      java.util.List<com.htinf.sm.model.DeviceConfig>
+     * @DATE:        2021/7/3 11:10
+     * @Author:      AdministratorDeviceConfigController
+     **/
+    @RequestMapping(value = "selectAll.do", method = RequestMethod.POST)
+    public ResultValue selectAllDeviceConfig(@Valid @RequestBody DeviceConfig deviceConfig) {
+        return ResultValue.success(deviceConfigService.selectAllDeviceConfig(deviceConfig, deviceConfig.getPage()));
+    }
+
+}
+

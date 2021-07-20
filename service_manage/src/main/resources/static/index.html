@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./public/css/common.css" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <ul class="layui-nav layui-bg-blue" lay-bar="disabled">
+        <li class="layui-nav-item ht-nav"><a href="./form.html" style="color: #fff;font-size: 20px;">
+            <img src="./public/img/logo.png" style="width: 38px;" alt="">
+            服务管理后台
+        </a>
+        </li>
+        <li class="layui-nav-item layui-this"><a href="">服务类型管理</a></li>
+        <li class="layui-nav-item"><a href="">服务器管理</a></li>
+        <li class="layui-nav-item"><a href="">第三方设备</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">服务管理</a>
+        </li>
+        <li class="layui-nav-item" style="float: right;">
+            <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img">上午好！admin</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">修改密码</a></dd>
+                <hr>
+                <dd style="text-align: center;"><a href="./login.html">退出</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <section style="margin:10px">
+        <section>
+                <span class="layui-breadcrumb">
+                    <a href="/">首页</a>
+                    <a href="/demo/">服务类型管理</a>
+                </span>
+        </section>
+        <!--  -->
+        <section class="whitebox">
+            <form class="layui-form" action="" lay-filter="example">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">服务类型</label>
+                        <div class="layui-input-inline">
+                            <input type="tel" name="name" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">是否集群</label>
+                        <div class="layui-input-inline">
+                            <select name="ifCluster" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" class="layui-btn layui-btn-normal"
+                                id="LAY-component-form-getval">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" id="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--  -->
+        <!--  -->
+        <section class="whitebox">
+            <button type="button" class="layui-btn layui-btn-normal" id="addbtn">新增</button>
+            <div class="layui-form">
+                <table class="layui-table" lay-filter="demo">
+                    <colgroup>
+                        <col width="150">
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>服务名称</th>
+                        <th>服务描述</th>
+                        <th>是否集群</th>
+                        <th>服务状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="item in tablelist">
+                        <td>{{item.name}}</td>
+                        <td>{{item.clusterSC}}</td>
+                        <td>{{item.ifCluster ===1? '是':'否'}}</td>
+                        <td>{{item.status ===1? '开启':'关闭'}}</td>
+                        <td>{{item.create_time}}</td>
+                        <td>
+                            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="overflow: hidden;">
+                <div style="float: right;">
+                    <div id="demo7"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--  -->
+    </section>
+</div>
+
+<script src="./layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            tablelist: []
+        },
+        mounted() {
+            this.getdata({})
+        },
+        methods: {
+            // 请求数据
+            getdata({ name = '', ifCluster = 1, page_index = 1, page_size = 10 }) {
+                let that = this;
+                let postdata = {
+                    name,
+                    ifCluster,
+                    "page": {
+                        "page_size": page_size,
+                        "page_index": page_index,
+                    }
+                }
+                console.log('请求参数====》', postdata)
+                $.ajax({
+                    type: "post",
+                    url: '/serviceManage/serviceType/selectAll.do',
+                    async: false,
+                    data: JSON.stringify(postdata),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data.result)
+                        that.tablelist = [...data.result.dataList];
+                        console.log(that.data)
+                        that.renderPage(data.result.page.total_size, data.result.page.page_index)
+                        // $('#result').text(data.result);
+                    } // 注意不要在此行增加逗号
+                });
+            },
+            // 渲染分页
+            renderPage(count, curr) {
+                let that = this;
+                // 分页
+                layui.use(['laypage', 'layer'], function () {
+                    var laypage = layui.laypage
+                        , layer = layui.layer;
+                    //完整功能
+                    laypage.render({
+                        elem: 'demo7'
+                        , count: count
+                        , curr: curr
+                        , theme: '#1E9FFF'
+                        , layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                        , jump: function (obj, first) {
+                            console.log(obj)
+                            if (!first) {
+                                that.getdata({ page_index: obj.curr, page_size: obj.limit })
+
+                            }
+                        }
+                    });
+                })
+            }
+        }
+    })
+    layui.use('element', function () {
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        element.on('nav(demo)', function (elem) {
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form;
+        //表单取值
+        layui.$('#LAY-component-form-getval').on('click', function () {
+            var data = form.val('example');
+            console.log(app.getdata({ ...data }))
+            // alert(JSON.stringify(data));
+        });
+        layui.$("#reset").click(function () {
+            var data = form.val('example');
+            console.log(app.getdata({ ...data }))
+        })
+    })
+    // 表格
+
+
+
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        $('#addbtn').click(function () {
+            layer.open({
+                type: 1,
+                title: "新增",
+                area: ['800px', '900px'],
+                content: $('#formexample'),
+                // btn: ['确定', '取消'],
+                yes: function (index) {
+                    alert("这是点击确定按钮走的回调")
+                },
+                btn2: function () {
+                    alert("这是点击取消按钮走的回调")
+                },
+                end: function () {
+                    alert('这是点击任一按钮都会走的回调')
+                }
+            });
+
+        })
+
+    });
+</script>
+
+</body>
+<!-- 弹窗表单 -->、
+<section id="formexample" style="display: none;">
+    <form class="layui-form" action="" lay-filter="example">
+        <div class="layui-form-item">
+            <label class="layui-form-label">输入框</label>
+            <div class="layui-input-block">
+                <input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码框</label>
+            <div class="layui-input-block">
+                <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">选择框</label>
+            <div class="layui-input-block">
+                <select name="interest" lay-filter="aihao">
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1">阅读</option>
+                    <option value="2">游戏</option>
+                    <option value="3">音乐</option>
+                    <option value="4">旅行</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">复选框</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="like[write]" title="写作">
+                <input type="checkbox" name="like[read]" title="阅读">
+                <input type="checkbox" name="like[daze]" title="发呆">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">开关</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">单选框</label>
+            <div class="layui-input-block">
+                <input type="radio" name="sex" value="男" title="男" checked="">
+                <input type="radio" name="sex" value="女" title="女">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">文本域</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-setval">赋值</button>
+                <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-getval">取值</button>
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+</html>

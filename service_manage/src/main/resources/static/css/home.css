@@ -1,0 +1,509 @@
+@charset "utf-8";
+
+/*亲情管理系统进入后首页样式*/
+.f18 {
+  font-size: 18px;
+}
+.f22 {
+  font-size: 24px;
+}
+.blue span,
+.bluelight span,
+.greenlight span,
+.orglight span {
+  margin-right: 3px;
+}
+.bluelight {
+  color: #63bff9;
+}
+.blue {
+  color: #7cbee9;
+}
+.greenlight {
+  color: #41cfc0;
+}
+.orglight {
+  color: #ffb865;
+}
+.org {
+  color: #ffb966;
+}
+.gray {
+  color: #999999;
+}
+
+.qq-wrapper {
+  width: 100%;
+}
+
+.content-1,
+.content-2,
+.content-3 {
+  margin: 1%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.content-1 {
+  height: 240px;
+}
+.qq-title {
+  position: relative;
+  width: 100%;
+  line-height: 50px;
+  font-size: 18px;
+  text-indent: 15px;
+  color: #333333;
+  border-bottom: 1px solid #dddddd;
+}
+.qq-title img {
+  vertical-align: middle;
+  margin: -3px 5px 0 0;
+}
+.content-2-time {
+  margin-left: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  background: url(../images/line.png) no-repeat left center;
+}
+.content-1 .to-do-content:first-child {
+  width: 50%;
+  margin-right: 1%;
+}
+.content-1 .to-do-content:last-child {
+  width: 49%;
+}
+.to-do-content {
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 240px;
+  float: left;
+  background-color: #ffffff;
+}
+.tab-con {
+  position: relative;
+  height: 188px;
+  overflow: hidden;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
+.to-do-tab {
+  width: 100%;
+  text-align: center;
+}
+.info-con {
+  margin: 10px auto;
+  max-width: 130px;
+  height: 40px;
+  color: #999999;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.warning-con {
+  margin-left: 1%;
+  padding: 0.5% 0.5% 0.5% 1%;
+  width: 20%;
+  height: 226px;
+  float: left;
+  background-color: #ffffff;
+}
+.warning-ul {
+  list-style: disc;
+  color: #ff0000;
+}
+.warning-ul li {
+  line-height: 36px;
+}
+.warning-ul li span {
+  margin-right: 3px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 10px;
+}
+
+.content-2 {
+  background-color: #ffffff;
+  min-height: 250px;
+}
+.content-2-ul li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  height: 200px;
+}
+.content-3 {
+  background-color: #ffffff;
+  min-height: 150px;
+}
+.content-3 ul li {
+  margin-left: 15px;
+  line-height: 30px;
+  color: #8d8d8d;
+}
+.data-descri {
+  text-align: center;
+}
+.data-descri img {
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 3px;
+}
+.chartsDiv {
+  width: 100%;
+  height: 190px;
+}
+#data-1,
+#data-2,
+#data-3,
+#data-4,
+#data-5,
+#data-6,
+#data-4,
+#data-5,
+#data-6{
+  float: left;
+  width: calc(32.5vw);
+  height: 190px;
+}
+/* #data-1 div,
+#data-2 div,
+#data-3 div,
+#data-4 div,
+#data-5 div,
+#data-6 div {
+  width: 98% !important;
+  height: 190px !important;
+} */
+#data-11,
+#data-12,
+#data-13 {
+  width: 100%;
+  height: 240px;
+}
+
+/*下载弹框样式*/
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.dl-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -270px 0 0 -324px;
+  width: 628px;
+  height: 492px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.dl-title {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  background-color: #4ba4df;
+}
+.close-icon {
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.tips {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  line-height: 28px;
+  font-size: 16px;
+  color: #e53434;
+  background-color: #ffefd1;
+}
+
+.tips1 {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  line-height: 28px;
+  font-size: 16px;
+  color: #e53434;
+  background-color: #ffefd1;
+}
+
+.btnGroup {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  text-align: right;
+}
+
+.btna {
+  display: inline-block;
+  line-height: 50px;
+  width: 100px;
+  text-align: center;
+  text-indent: 0;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 5px;
+  background-color: #007ae4; /* 不支持线性的时候显示 */
+  background-image: linear-gradient(139deg, #00a6ed 0%, #007ae4 100%);
+  cursor: pointer;
+}
+.btna:hover {
+  color: #ffffff;
+}
+
+.btnGroup1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7%;
+}
+.btnGroup > div {
+  flex: 1;
+}
+.btna1 {
+  display: inline-block;
+  line-height: 50px;
+  width: 160px;
+  text-align: center;
+  text-indent: 0;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 5px;
+  background-color: #007ae4; /* 不支持线性的时候显示 */
+  background-image: linear-gradient(139deg, #00a6ed 0%, #007ae4 100%);
+  cursor: pointer;
+}
+.btna1:hover {
+  color: #ffffff;
+}
+
+.btna2 {
+  display: inline-block;
+  line-height: 50px;
+  width: 160px;
+  text-align: center;
+  text-indent: 0;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 4px;
+  color: black;
+  margin-right: 5px;
+  background-color: #007ae4; /* 不支持线性的时候显示 */
+  background-image: linear-gradient(139deg, #ffffff 0%, #ffffff 100%);
+  cursor: pointer;
+}
+.btna2:hover {
+  color: #ffffff;
+}
+
+.tabDiv {
+  float: left;
+  width: 46%;
+  height: 60px;
+  line-height: 60px;
+  margin: 1.5%;
+  border: 1px solid #d6ebff;
+  background-color: #f5fbff;
+}
+.tabDiv span {
+  display: inline-block;
+}
+.span1 {
+  vertical-align: middle;
+  margin-left: 5%;
+}
+
+.span2 {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.netState {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 16px;
+}
+.normalState,
+.abnormalState {
+  position: relative;
+  margin-right: 24px;
+}
+.normalState:before,
+.abnormalState:before {
+  content: "";
+  position: absolute;
+  top: 32%;
+  left: -15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.normalState:before {
+  background-color: #23af00;
+}
+.abnormalState:before {
+  background-color: #e83535;
+}
+
+.netContent,
+.netContent2 {
+  padding: 15px;
+  margin: 20px;
+}
+.netContent {
+  border: 1px solid #afe5a2;
+  background-color: #e3ffe5;
+}
+.netContent2 {
+  border: 1px solid #ff7b7b;
+  background-color: #ffdddd;
+}
+
+.thBg {
+  background: url("../images/icon_1.png") no-repeat;
+  background-position: bottom right;
+}
+.dataBg {
+  background: url("../images/icon_2.png") no-repeat;
+  background-position: bottom right;
+}
+
+/* 弹框 */
+.logPop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.popContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 400px;
+  margin: -300px 0 0 -400px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #98bbe8;
+}
+.popTitle {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #15428b;
+  text-indent: 1em;
+  border-bottom: 2px solid #9ebfe9;
+  /* background: url("../images/bg.png") repeat-x; */
+}
+.popClose {
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  font-size: 28px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.popCon {
+  width: 100%;
+  height: 340px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.popDes {
+  width: 90%;
+  margin: 0 auto;
+}
+.popDes ul li {
+  height: 30px;
+  line-height: 30px;
+  color: #333333;
+}
+
+.greenText {
+  color: #23af00;
+}
+.redText {
+  color: #e83535;
+}
+.blueText {
+  color: #3792ff;
+}
+
+.marRight2 {
+  margin-right: 5%;
+}
+
+.f16 {
+  font-size: 18px;
+}
+.f22 {
+  font-size: 18px;
+}
+.fw {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.layui-carousel-ind {
+  bottom: 25px;
+  top: auto !important;
+}
+.layui-carousel,
+.layui-carousel > [carousel-item] > * {
+  background-color: #ffffff !important;
+}
+.layui-carousel-ind ul {
+  background-color: transparent !important;
+}
+.layui-carousel-ind li {
+  background-color: #ffffff;
+  border: 1px solid #8d8d8d;
+}
+.layui-carousel-ind li.layui-this {
+  background-color: #ff0000 !important;
+  border: 1px solid #ff0000;
+}

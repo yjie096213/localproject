@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>WebSocket</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.particleground.min.js"></script>
+    <script type="text/javascript">
+
+        // 打印日志
+        function log(userName, password, ip, port, command) {
+            var command = command.replace(new RegExp("/","gm"), "~");
+            alert(command);
+            var webSocket = new WebSocket("ws://10.250.204.94:8081/serviceManage/log/{"
+                + userName + "}/{"
+                + password + "}/{"
+                + ip + "}/{"
+                + port + "}/{"
+                + command + "}/log.do");
+            webSocket.onmessage = function(event) {
+                console.log("event.data" + event.data);
+                var log = document.getElementById("tomcatLog");
+                var logDiv = log.firstElementChild;
+                $(logDiv).append(event.data);
+            }
+        }
+
+        // 页面前置加载
+        $(document).ready(function() {
+            log("root", "ht88864488", "10.250.196.152", "22", "tail -f /opt/tomcat7/logs/catalina.out");
+            // log("sipvoiceLog", "<%=sipvoiceLog%>");
+        });
+    </script>
+</head>
+<body>
+<h2>Hello World!</h2>
+<div id="tomcatLog"  style="height: 100%; overflow-y: scroll; background: #333; color: #aaa; padding: 10px;">
+    <div>
+    </div>
+</div>
+</body>
+</html>

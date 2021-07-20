@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>服务器实时数据</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="js/layui/css/layui.css" />
+
+  <style>
+    body {
+      background-color: #e6f0f8;
+    }
+
+    #test1 {
+      height: 190px !important;
+    }
+
+    #test2 {
+      height: 188px !important;
+    }
+
+    #test3 {
+      height: 188px !important;
+    }
+
+    #test4 {
+      height: 188px !important;
+    }
+  </style>
+</head>
+
+<body>
+<div class="qq-wrapper">
+  <div class="content-2">
+    <div class="qq-title" id="serverDiv"><span>服务器实时数据</span></div>
+    <div class="layui-carousel" id="test1" lay-filter="test1" style='height: 190px;'>
+      <!--      <div carousel-item id="serverPanel">-->
+      <!--      </div>-->
+    </div>
+  </div>
+  <div class="content-1">
+    <div class="to-do-content">
+      <div class="qq-title">
+        Tomcat服务
+      </div>
+      <div class="tab-con">
+        <div class="layui-carousel" id="test2" lay-filter="test2">
+        </div>
+      </div>
+    </div>
+    <div class="to-do-content">
+      <div class="qq-title">
+        通话服务
+      </div>
+      <div class="tab-con">
+        <div class="layui-carousel" id="test3" lay-filter="test3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-1">
+    <div class="to-do-content">
+      <div class="qq-title">
+        数据库服务
+      </div>
+      <div class="tab-con">
+        <div class="layui-carousel" id="test4" lay-filter="test4">
+        </div>
+      </div>
+    </div>
+    <div class="to-do-content">
+      <div class="qq-title">
+        网关服务
+      </div>
+      <div class="tab-con" id='netCon'>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="logPop">
+  <div class="popBg"></div>
+  <div class="popContent">
+    <div class="popTitle">查看实时日志<a class="popClose" onclick='closePop("logPop")'>×</a></div>
+    <div class="popCon">
+      <div class="popDes">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/serviceManage/js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script src="/serviceManage/js/layui/layui.js"></script>
+
+<script type="text/javascript">
+
+  var colors = ['#F9B22A', '#3792FF'];
+  var serverIp = "";
+  var serverUserName = "";
+  var serverPassword = "";
+  var serverPort = "";
+
+  var webSocket = null;
+
+  $(function() {
+    disPlay();
+    // setTimeout(disPlay,300000);
+
+    // 退出系统时, 关闭建立的WebSocket链接
+    window.onbeforeunload = function () {
+      webSocket.close();
+    }
+  });
+
+  function disPlay() {
+
+    $.ajax({
+      type: "POST",
+      url: '/serviceManage/serverConfig/selectDisPlay.do',
+      data: JSON.stringify({"status": 0}),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (returnDate) {
+        if (returnDate.result.length > 0) {
+          var serverHtml = document.getElementById("test1");
+          var serverDiv = document.getElementById("serverDiv");
+
+          var serverName = [];
+          var memorySizeArr = [];
+
+          var str = '<div carousel-item>';
+          for (var i = 0; i < returnDate.result.length; i++) {
+
+            serverName.push(returnDate.result[i].serverName);
+
+            if(i == 0){
+              serverDiv.innerHTML = '<span class="blueText f22 fw">（' + returnDate.result[i].serverName + '）实时数据</span><span class="tips"><a href="./serverConfig.html">后台管理</a></span>';
+            }
+            var idStr1 = 1 + 3 * i;
+            var idStr2 = 2 + 3 * i;
+            var idStr3 = 3 + 3 * i;
+            str += '<div class="chartsDiv"><div id="data-' + idStr1 + '" style="float: left;width: calc(31.5vw); height: 190px;"></div><div id="data-' + idStr2 + '" style="float: left;width: calc(31.5vw); height: 190px;"></div><div id="data-' + idStr3 + '" style="float: left;width: calc(31.5vw); height: 190px;"></div></div>';
+          }
+          str+='</div>';
+          serverHtml.innerHTML = str;
+
+          var myChart = [];
+          var data = [];
+          var title = [];
+          var option = [];
+
+
+          for (var j = 0; j < returnDate.result.length; j++) {
+            var idStr1 = 1 + 3 * j;
+            var idStr2 = 2 + 3 * j;
+            var idStr3 = 3 + 3 * j;
+            myChart[idStr1] = echarts.init(document.getElementById("data-" + idStr1));
+            myChart[idStr2] = echarts.init(document.getElementById("data-" + idStr2));
+            myChart[idStr3] = echarts.init(document.getElementById("data-" + idStr3));
+
+            $.ajax({
+              async: false,
+              type: "POST",
+              url: '/serviceManage/checkService/checkDiskSize.do',
+              data: JSON.stringify({
+                "serviceIp": returnDate.result[j].serverIp,
+                "servicePort": returnDate.result[j].sshPort,
+                "userName": returnDate.result[j].userName,
+                "password": returnDate.result[j].password,
+                "command": "df -lh /opt"
+              }),
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (data1) {
+                if(data1.result.status == 0){
+                  data[idStr1] = [{ value: data1.result.result.diskRemain, name: '硬盘剩余容量' },{ value: data1.result.result.diskUserd, name: '硬盘已用容量' }];
+                  title[idStr1] = ['硬盘已用容量', '硬盘剩余容量'];
+                }else{
+                }
+              }
+            });
+
+            $.ajax({
+              async: false,
+              type: "POST",
+              url: '/serviceManage/checkService/checkMemorySize.do',
+              data: JSON.stringify({
+                "serviceIp": returnDate.result[j].serverIp,
+                "servicePort": returnDate.result[j].sshPort,
+                "userName": returnDate.result[j].userName,
+                "password": returnDate.result[j].password,
+                "command": "free -h"
+              }),
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (data2) {
+                if(data2.result.status == 0){
+                  data[idStr2] = [{ value: data2.result.result.memoryRemain, name: '内存剩余容量' },{ value: data2.result.result.memoryUserd, name: '内存已用容量' }];
+                  title[idStr2] = ['内存已用容量', '内存剩余容量'];
+
+                  memorySizeArr.push(data2.result.result.memoryRemain);
+                }else{
+                }
+              }
+            });
+
+            $.ajax({
+              async: false,
+              type: "POST",
+              url: '/serviceManage/checkService/checkCPUSize.do',
+              data: JSON.stringify({
+                "serviceIp": returnDate.result[j].serverIp,
+                "servicePort": returnDate.result[j].sshPort,
+                "userName": returnDate.result[j].userName,
+                "password": returnDate.result[j].password,
+                "command": "top -b -n 1"
+              }),
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (data3) {
+                if(data3.result.status == 0){
+                  data[idStr3] = [{ value: data3.result.result.cpuRemain, name: 'CPU剩余容量' },{ value: data3.result.result.cpuUserd, name: 'CPU已用容量' }];
+                  title[idStr3] = ['CPU剩余容量', 'CPU已用容量'];
+                }else{
+                }
+              }
+            });
+
+            option[idStr1] = optionset(data[idStr1], title[idStr1], 'GB');
+            option[idStr2] = optionset(data[idStr2], title[idStr2], 'GB');
+            option[idStr3] = optionset(data[idStr3], title[idStr3], 'M');
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart[idStr1].setOption(option[idStr1]);
+            myChart[idStr2].setOption(option[idStr2]);
+            myChart[idStr3].setOption(option[idStr3]);
+
+            layui.use('carousel', function () {
+              var carousel = layui.carousel;
+              //建造实例 -- 服务器实时数据
+              carousel.render({
+                elem: '#test1',
+                width: '100%', //设置容器宽度
+                arrow: 'always', //始终显示箭头
+                autoplay: false,
+                arrow: 'none',
+              });
+
+              // 触发轮播切换事件
+              carousel.on('change(test1)', function (obj) {
+
+                serverIp = returnDate.result[obj.index].serverIp;
+                serverUserName = returnDate.result[obj.index].userName;
+                serverPassword = returnDate.result[obj.index].password;
+                serverPort = returnDate.result[obj.index].sshPort;
+
+                // console.log('obj.index========', obj.index); //当前条目的索引
+                if(memorySizeArr[obj.index] < 1){
+                  serverDiv.innerHTML = '<span>（' + serverName[obj.index] + '）实时数据<span class="tips"><img src=\'images/tips.png\'>请注意服务器内存接近预警值！</span>';
+                }else{
+                  serverDiv.innerHTML = '<span>（' + serverName[obj.index] + '）实时数据</span>';
+                }
+
+                changeServer(returnDate.result[obj.index]);
+
+
+              });
+
+            });
+
+            // 当浏览器发生resize事件，图表自适应
+            window.addEventListener("resize", function () {
+              myChart[idStr1].resize();
+              myChart[idStr2].resize();
+              myChart[idStr3].resize();
+            });
+
+            if(j == 0){
+              serverIp = returnDate.result[0].serverIp;
+              serverUserName = returnDate.result[0].userName;
+              serverPassword = returnDate.result[0].password;
+              serverPort = returnDate.result[0].sshPort;
+
+              changeServer(returnDate.result[0]);
+            }
+          }
+        }
+      }
+    })
+  };
+
+  function changeServer(returnDate) {
+
+    var serverHtml1 = document.getElementById("test2");
+    var tomcat_str = '<div carousel-item style="height: 190px!important;">';
+
+    var serverHtml2 = document.getElementById("test3");
+    var dianhua_str = '<div carousel-item style="height: 190px!important;">';
+
+    var serverHtml3 = document.getElementById("test4");
+    var db_str = '<div carousel-item style="height: 190px!important;">';
+
+    var serverHtml4 = document.getElementById("netCon");
+    var gateway_str = '';
+
+
+    if(returnDate.serviceConfigList.length > 0){
+
+      for(var k = 0;k < returnDate.serviceConfigList.length;k ++){
+
+        if(returnDate.serviceConfigList[k].typeName.indexOf("omcat") > -1){
+
+          var heap = "";
+          $.ajax({
+            async: false,
+            type: "POST",
+            url: '/serviceManage/checkService/checkLinuxProcess.do',
+            data: JSON.stringify({
+              "serviceIp": returnDate.serverIp,
+              "servicePort": returnDate.sshPort,
+              "userName": returnDate.userName,
+              "password": returnDate.password,
+              "command": returnDate.serviceConfigList[k].stateCommand
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data5) {
+              if(data5.result.status == 0){
+                tomcat_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name +
+                        '</span><span class="greenText fw" >（' + data5.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick=realStartTomcat("' + returnDate.serviceConfigList[k].restartCommand + '")>重启Tomcat</a> ' +
+                        '<a class="btna" onclick=realTomcatLog("' + returnDate.serviceConfigList[k].logPath + '")>查看实时日志</a> ' +
+                        '<a class="btna" onclick=downloadTomcatLog("' + returnDate.serviceConfigList[k].logPath + '","' + returnDate.serviceConfigList[k].targetPath + '")>日志下载</a> </div>';
+              }else{
+                tomcat_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name
+                        + '</span><span class="redText fw" >（' + data5.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick=realStartTomcat("' + returnDate.serviceConfigList[k].restartCommand + '")>重启Tomcat</a> ' +
+                        '<a class="btna" onclick=realTomcatLog("' + returnDate.serviceConfigList[k].logPath + '")>查看实时日志</a> ' +
+                        '<a class="btna" onclick=downloadTomcatLog("' + returnDate.serviceConfigList[k].logPath + '","' + returnDate.serviceConfigList[k].targetPath + '")>日志下载</a> </div>';
+              }
+              heap = data5.result.result;
+            }
+          });
+          $.ajax({
+            async: false,
+            type: "POST",
+            url: '/serviceManage/checkService/checkJVMSize.do',
+            data: JSON.stringify({
+              "serviceIp": returnDate.serverIp,
+              "servicePort": returnDate.sshPort,
+              "userName": returnDate.userName,
+              "password": returnDate.password,
+              "command": returnDate.serviceConfigList[k].jvmCommand + " " + heap
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data6) {
+              if(null != data6.result.result.jvmUserd){
+                tomcat_str += '<div class="tabDiv"><span class="span1 f22 fw marRight2">已用内存</span> <span class="span1 blueText f22 fw marRight2">' + data6.result.result.jvmUserd + '</span></div>';
+              }
+              if(null != data6.result.result.jvmRemain){
+                tomcat_str += '<div class="tabDiv"><span class="span1 f22 fw marRight2">剩余内存</span><span class="span1 blueText f22 fw marRight2">' + data6.result.result.jvmRemain + '</span></div>';
+              }
+            }
+          });
+          tomcat_str += '</div>';
+        }
+
+        if(returnDate.serviceConfigList[k].typeName.indexOf("通话") > -1) {
+
+          $.ajax({
+            async: false,
+            type: "POST",
+            url: '/serviceManage/checkService/checkLinuxProcess.do',
+            data: JSON.stringify({
+              "serviceIp": returnDate.serverIp,
+              "servicePort": returnDate.sshPort,
+              "userName": returnDate.userName,
+              "password": returnDate.password,
+              "command": returnDate.serviceConfigList[k].stateCommand
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data77) {
+              if(data77.result.status == 0){
+                dianhua_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name + '</span><span class="greenText fw" >（' + data77.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick=realStartDianhua("' + returnDate.serviceConfigList[k].restartCommand + '")>重启服务</a> ' +
+                        '<a class="btna" onclick=realDianhuaLog("' + returnDate.serviceConfigList[k].logPath + '")>查看实时日志</a> ' +
+                        '<a class="btna" onclick=downloadDianhuaLog("' + returnDate.serviceConfigList[k].logPath + '","' + returnDate.serviceConfigList[k].targetPath + '")>日志下载</a> ' +
+                        '</div></div>';
+              }else{
+                dianhua_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name + '</span><span class="redText fw" >（' + data77.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick="realStartDianhua()">重启服务</a> ' +
+                        '<a class="btna" onclick=realDianhuaLog("' + returnDate.serviceConfigList[k].logPath + '")>查看实时日志</a> ' +
+                        '<a class="btna" onclick=downloadDianhuaLog("' + returnDate.serviceConfigList[k].logPath + '","' + returnDate.serviceConfigList[k].targetPath + '")>日志下载</a> ' +
+                        '</div></div>';
+              }
+            }
+          });
+        }
+
+        if(returnDate.serviceConfigList[k].typeName.indexOf("数据库") > -1) {
+
+          $.ajax({
+            async: false,
+            type: "POST",
+            url: '/serviceManage/checkService/checkLinuxProcess.do',
+            data: JSON.stringify({
+              "serviceIp": returnDate.serverIp,
+              "servicePort": returnDate.sshPort,
+              "userName": returnDate.userName,
+              "password": returnDate.password,
+              "command": returnDate.serviceConfigList[k].stateCommand
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data88) {
+              if(data88.result.status == 0){
+                db_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name + '</span><span class="greenText fw" >（' + data88.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick=realStartShujuku("' + returnDate.serviceConfigList[k].restartCommand + '")>重启数据库</a> ' +
+                        '<a class="btna" onclick=realShujukuBak("' + returnDate.serviceConfigList[k].backupCommand + '")>备份数据库</a></div></div>';
+              }else{
+                db_str += '<div class=""><div class="tabDiv"><span class="span1 blueText f22 fw marRight2">' + returnDate.serviceConfigList[k].name + '</span><span class="redText fw" >（' + data88.result.statusName + '）</span> </div> <div class="tabDiv"> ' +
+                        '<a class="btna" onclick=realStartShujuku("' + returnDate.serviceConfigList[k].restartCommand + '")>重启数据库</a> ' +
+                        '<a class="btna" onclick=realShujukuBak("' + returnDate.serviceConfigList[k].backupCommand + '")>备份数据库</a></div></div>';
+              }
+            }
+          });
+        }
+
+        if(returnDate.serviceConfigList[k].typeName.indexOf("网关") > -1) {
+          $.ajax({
+            async: false,
+            type: "POST",
+            url: '/serviceManage/checkService/checkNetAddress.do',
+            data: JSON.stringify({
+              "netAddress": returnDate.serviceConfigList[k].manageURL
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data99) {
+              if(data99.result.status == 0){
+                gateway_str += '<div class="netContent">' +returnDate.serviceConfigList[k].name + ' - ' + returnDate.serviceConfigList[k].manageURL + '</span><span class="greenText fw" >（' + data99.result.statusName + '）</span></div>';
+              }else{
+                gateway_str += '<div class="netContent">' +returnDate.serviceConfigList[k].name + ' - ' + returnDate.serviceConfigList[k].manageURL + '</span><span class="redText fw" >（' + data99.result.statusName + '）</span></div>';
+              }
+            }
+          });
+        }
+
+      }
+    }
+
+    tomcat_str += '</div>';
+    serverHtml1.innerHTML = tomcat_str;
+
+    dianhua_str += '</div>';
+    serverHtml2.innerHTML = dianhua_str;
+
+    db_str += '</div>';
+    serverHtml3.innerHTML = db_str;
+
+    gateway_str += '</div>';
+    serverHtml4.innerHTML = gateway_str;
+
+    layui.use('carousel', function () {
+      var carousel = layui.carousel;
+      //建造实例 -- 服务器实时数据
+      carousel.render({
+        elem: '#test2',
+        width: '100%', //设置容器宽度
+        arrow: 'always', //始终显示箭头
+        autoplay: false,
+        arrow: 'none',
+      });
+
+      // 触发轮播切换事件
+      carousel.on('change(test2)', function (obj) {
+
+      });
+
+    });
+
+    layui.use('carousel', function () {
+      var carousel = layui.carousel;
+      //建造实例 -- 服务器实时数据
+      carousel.render({
+        elem: '#test3',
+        width: '100%', //设置容器宽度
+        arrow: 'always', //始终显示箭头
+        autoplay: false,
+        arrow: 'none',
+      });
+
+      // 触发轮播切换事件
+      carousel.on('change(test3)', function (obj) {
+
+      });
+
+    });
+
+    layui.use('carousel', function () {
+      var carousel = layui.carousel;
+      //建造实例 -- 服务器实时数据
+      carousel.render({
+        elem: '#test4',
+        width: '100%', //设置容器宽度
+        arrow: 'always', //始终显示箭头
+        autoplay: false,
+        arrow: 'none',
+      });
+
+      // 触发轮播切换事件
+      carousel.on('change(test4)', function (obj) {
+
+      });
+
+    });
+
+  }
+
+  function realStartTomcat(command) {
+
+    $.ajax({
+      async: false,
+      type: "POST",
+      url: '/serviceManage/checkService/executeLinuxProcess.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "command": command
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data10) {
+        if(data10.result.status == 0){
+          alert("重启tomcat成功");
+        }else{
+          alert("重启tomcat失败");
+        }
+      }
+    });
+  }
+
+  function realTomcatLog(command) {
+
+    // 打印日志
+    var command = command.replace(new RegExp("/", "gm"), "~");
+    webSocket = new WebSocket("ws://localhost:8081/serviceManage/log/{"
+            + serverUserName + "}/{"
+            + serverPassword + "}/{"
+            + serverIp + "}/{"
+            + serverPort + "}/{"
+            + "tail -f " + command + "}/log.do");
+    webSocket.onmessage = function (event) {
+      $('.logPop').show();
+      $('.popDes ul').html(event.data);
+    }
+
+
+  }
+
+  function downloadTomcatLog(tomcat_logcommand, tomcat_targetPath) {
+    $.ajax({
+      async: false,
+      type: "POST",
+      url: '/serviceManage/checkService/downRemoteFile.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "sourcePath": tomcat_logcommand,
+        "targetPath": tomcat_targetPath
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data10) {
+        if(data10.result.status == 0){
+          alert("日志下载成功");
+        }else{
+          alert("日志下载失败");
+        }
+      }
+    });
+  }
+
+  function realStartDianhua(command) {
+    $.ajax({
+      type: "POST",
+      url: '/serviceManage/checkService/executeLinuxProcess.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "command": command
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data11) {
+        if(data11.result.status == 0){
+          alert("重启通话服务成功");
+        }else{
+          alert("重启通话服务失败");
+        }
+      }
+    });
+  }
+
+  function realDianhuaLog(command) {
+
+    // 打印日志
+    var command = command.replace(new RegExp("/","gm"), "~");
+    webSocket = new WebSocket("ws://localhost:8081/serviceManage/log/{"
+            + serverUserName + "}/{"
+            + serverPassword + "}/{"
+            + serverIp + "}/{"
+            + serverPort + "}/{"
+            + "tail -f " + command + "}/log.do");
+    webSocket.onmessage = function(event) {
+      var log = document.getElementById("tomcatLog");
+      var logDiv = log.firstElementChild;
+      $(logDiv).append(event.data);
+    }
+
+
+    // $.ajax({
+    //   async: false,
+    //   type: "POST",
+    //   url: '/serviceManage/checkService/executeLinuxProcess.do',
+    //   data: JSON.stringify({
+    //     "serviceIp": serverIp,
+    //     "servicePort": serverPort,
+    //     "userName": serverUserName,
+    //     "password": serverPassword,
+    //     "command": "tail -f " + command
+    //   }),
+    //   contentType: "application/json; charset=utf-8",
+    //   dataType: "json",
+    //   success: function (data10) {
+    //     if(data10.result.status == 0){
+    //       $('.logPop').show();
+    //
+    //       let logData = [
+    //         { con: '工作日志或者岗位日志工作日志或者岗位日志工作日志或者岗位日志' }
+    //       ];
+    //
+    //       var htmls = '';
+    //       for (var i = 0; i < logData.length; i++) {
+    //         htmls += '<li>' + (i + 1) + '.' + logData[i].con + '</li>';
+    //       }
+    //       $('.popDes ul').html(htmls);
+    //     }
+    //   }
+    // });
+  }
+
+  function downloadDianhuaLog(dianhua_logcommand, dianhua_targetPath) {
+    $.ajax({
+      async: false,
+      type: "POST",
+      url: '/serviceManage/checkService/downRemoteFile.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "sourcePath": dianhua_logcommand,
+        "targetPath": dianhua_targetPath
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data10) {
+        if(data10.result.status == 0){
+          alert("日志下载成功");
+        }else{
+          alert("日志下载失败");
+        }
+      }
+    });
+  }
+
+  function realStartShujuku(command) {
+    $.ajax({
+      type: "POST",
+      url: '/serviceManage/checkService/executeLinuxProcess.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "command": "tail -f " + command
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data12) {
+        if(data12.result.status == 0){
+          alert("重启数据库服务成功");
+        }else{
+          alert("重启数据库服务失败");
+        }
+      }
+    });
+  }
+
+  function realShujukuBak(command) {
+    $.ajax({
+      type: "POST",
+      url: '/serviceManage/checkService/executeLinuxProcess.do',
+      data: JSON.stringify({
+        "serviceIp": serverIp,
+        "servicePort": serverPort,
+        "userName": serverUserName,
+        "password": serverPassword,
+        "command": command
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data12) {
+        if(data12.result.status == 0){
+          alert("重启数据库备份成功");
+        }else{
+          alert("重启数据库备份失败");
+        }
+      }
+    });
+  }
+
+  function optionset(data, title, unit) {
+    var _option = {
+      tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+      },
+      legend: {
+        // show: true,
+        orient: 'vertical',
+        // left: 'right',
+        right: '10%',
+        top: 'center',
+        align: 'left',
+        textStyle: {
+          lineHeight: 50
+        },
+        data: title
+      },
+      color: colors,
+      calculable: true,
+      grid: {
+        top: 10
+      },
+      series: [
+        {
+          name: '服务器实时数据',
+          type: 'pie',
+          radius: '72%',
+          center: ['35%', '50%'],
+          data: data,
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                position: 'inside',
+                formatter: '{c}' + unit,
+                textStyle: {
+                  fontSize: 16
+                }
+              }
+            }
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+          }
+        }
+      ]
+    };
+    return _option;
+  }
+
+  function closePop(classes) {
+    webSocket.close();
+    $('.' + classes).hide();
+  }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="./layui/css/layui.css" />
+  <link rel="stylesheet" href="./public/css/common.css" />
+  <script src="/serviceManage/js/vue.js"></script>
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body>
+  <div id="app" style="height: auto">
+    <ul class="layui-nav layui-bg-blue" lay-bar="disabled">
+      <li class="layui-nav-item ht-nav"><a href="./form.html" style="color: #fff;font-size: 20px;">
+          <img src="./public/img/logo.png" style="width: 38px;" alt="">
+          服务管理后台
+        </a>
+      </li>
+      <li class="layui-nav-item layui-this" ><a href="./serverConfig.html">服务器管理</a></li>
+      <li class="layui-nav-item"><a href="./serviceType.html">服务类型管理</a></li>
+      <li class="layui-nav-item"><a href="./serviceConfig.html">服务管理</a></li>
+      <li class="layui-nav-item"><a href="./deviceConfig.html">第三方设备</a></li>
+      <li class="layui-nav-item" style="float: right;">
+        <a href="javascript:;"><img src="./public/img/logo.png" class="layui-nav-img">你好！admin</a>
+        <dl class="layui-nav-child">
+  <!--        <dd><a href="javascript:;">修改密码</a></dd>-->
+  <!--        <hr>-->
+          <dd style="text-align: center;"><a href="./login.html">退出</a></dd>
+        </dl>
+      </li>
+    </ul>
+
+    <section style="margin:10px">
+      <section>
+        <span class="layui-breadcrumb">
+  <!--        <a href="/">首页</a>-->
+          <a href="/demo/">服务器管理</a>
+        </span>
+      </section>
+      <!--  -->
+      <section class="whitebox">
+        <form class="layui-form" action="" lay-filter="example">
+          <div class="layui-form-item">
+            <div class="layui-inline">
+              <label class="layui-form-label">服务器名称：</label>
+              <div class="layui-input-inline">
+                <input type="tel" name="serverName" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+            <div class="layui-inline">
+              <label class="layui-form-label">服务器IP：</label>
+              <div class="layui-input-inline">
+                  <input type="tel" name="serverIp" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+<!--            <div class="layui-inline">-->
+<!--              <label class="layui-form-label">服务器类型：</label>-->
+<!--              <div class="layui-input-inline">-->
+<!--                <select name="type" id="s_type" lay-filter="aihao">-->
+<!--                  <option value=""></option>-->
+<!--                  <option value="1">电话服务器</option>-->
+<!--                  <option value="2">会见服务器</option>-->
+<!--                  <option value="3">融通服务器</option>-->
+<!--                  <option value="4">安防服务器</option>-->
+<!--                  <option value="5">监管通服务器</option>-->
+<!--                </select>-->
+<!--              </div>-->
+<!--            </div>-->
+            <div class="layui-inline">
+              <label class="layui-form-label">数据状态：</label>
+              <div class="layui-input-inline">
+                <select name="status" id="s_status" lay-filter="aihao">
+                  <option value=""></option>
+                  <option value="0">有效</option>
+                  <option value="1">无效</option>
+                </select>
+              </div>
+            </div>
+            <div class="layui-inline">
+              <button type="button" class="layui-btn layui-btn-normal" id="search">查询</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="whitebox">
+        <div align="right"><button type="button" class="layui-btn layui-btn-normal" style="margin-right: 80px;" id="addbtn">新增</button></div>
+        <div class="layui-form">
+          <table class="layui-table" lay-filter="demo">
+            <colgroup>
+              <col width="100">
+              <col width="100">
+              <col width="100">
+              <col width="100">
+              <col width="80">
+              <col width="80">
+              <col width="140">
+              <col width="100">
+              <col width="150">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>服务器名称</th>
+                <th>服务器IP</th>
+                <th>用户名</th>
+                <th>用户密码</th>
+                <th>SSH端口</th>
+                <th>SFTP端口</th>
+                <th>创建时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item in tablelist">
+              <td hidden="hidden">{{item.uuid}}</td>
+              <td>{{item.serverName}}</td>
+              <td>{{item.serverIp}}</td>
+              <td>{{item.userName}}</td>
+              <td>{{item.password}}</td>
+              <td>{{item.sshPort}}</td>
+              <td>{{item.sftpPort}}</td>
+              <td>{{item.create_time}}</td>
+              <td>{{item.status  === 0? '有效':'无效'}}</td>
+              <td>
+<!--                <a class="layui-btn layui-btn-primary layui-btn-xs" @click="detail(item)">查看</a>-->
+                <a class="layui-btn layui-btn-xs" lay-event="edit" @click="edit(item)">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" @click="del(item)">删除</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="overflow: hidden;">
+          <div style="float: right;">
+            <div id="demo7"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- 弹窗表单 -->
+    <section id="formexample" style="display: none;padding: 20px;">
+      <form class="layui-form" action="" lay-filter="addexample" id="addexample">
+
+<!--        <div class="layui-form-item">-->
+<!--          <label class="layui-form-label">服务器类型：</label>-->
+<!--          <div class="layui-input-block" style="width: 240px;">-->
+<!--            <select name="type" lay-filter="aihao">-->
+<!--              <option value=""></option>-->
+<!--              <option value="1">电话服务器</option>-->
+<!--              <option value="2">会见服务器</option>-->
+<!--              <option value="3">融通服务器</option>-->
+<!--              <option value="4">安防服务器</option>-->
+<!--              <option value="5">监管通服务器</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="layui-form-item">
+          <label class="layui-form-label">服务器名称：</label>
+          <div class="layui-input-block">
+            <input type="text" name="serverName" lay-verify="required" autocomplete="off" placeholder="请输入服务器名称"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">服务器IP：</label>
+          <div class="layui-input-block">
+            <input type="text" name="serverIp" lay-verify="required" autocomplete="off" placeholder="请输入服务器IP"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">登录名：</label>
+          <div class="layui-input-block">
+            <input type="text" name="userName" lay-verify="required" autocomplete="off" placeholder="请输入登录名"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">登录密码：</label>
+          <div class="layui-input-block">
+            <input type="text" name="password" lay-verify="required" autocomplete="off" placeholder="请输入登录密码"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">SSH端口：</label>
+          <div class="layui-input-block">
+            <input type="text" name="sshPort" lay-verify="required" autocomplete="off" placeholder="请输入SSH端口"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">SFTP端口：</label>
+          <div class="layui-input-block">
+            <input type="text" name="sftpPort" autocomplete="off" placeholder="请输入SSH端口"
+                   class="layui-input" style="width: 240px;">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">数据状态：</label>
+          <div class="layui-input-block">
+            <input type="radio" name="status" value="0" title="有效" checked="">
+            <input type="radio" name="status" value="1" title="无效">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button type="reset" class="layui-btn layui-btn-primary" id="addreset">重置</button>
+            <button type="submit" v-if="editdata.uuid" class="layui-btn" lay-submit="" lay-filter="editform">保存</button>
+            <button type="submit" v-else class="layui-btn" lay-submit="" lay-filter="addform">保存</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- 详情 -->
+    <section id="detailexample" style="display: none;padding: 20px;">
+      <form class="layui-form" action="" lay-filter="addexample" id="addexample">
+        <div class="layui-form-item">
+          <div>服务器名称：{{editdata.serverName}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>服务器IP： {{editdata.serverIp}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>userName：{{editdata.userName}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>password：{{editdata.password}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>sshPort：{{editdata.sshPort}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>sftpPort：{{editdata.sftpPort}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>创建时间：{{editdata.create_time}}</div>
+        </div>
+        <div class="layui-form-item">
+          <div>数据状态： {{editdata.status == 0?'有效':'无效'}}</div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!--  -->
+  </section>
+
+  <script src="/serviceManage/layui/layui.js"></script>
+  <!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        tablelist: [],
+        editdata: {}, // 编辑数据
+      },
+      mounted() {
+        this.getdata({})
+      },
+      methods: {
+        // 请求数据
+        getdata({ serverIp = '', status = '', serverName = '', page_index = 1, page_size = 10 }) {
+          let that = this;
+          let postdata = {
+            serverIp: serverIp,
+            status: status,
+            serverName: serverName,
+            "page": {
+              "page_size": page_size,
+              "page_index": page_index,
+            }
+          }
+          console.log('请求参数====》', postdata)
+          layui.$.ajax({
+            type: "post",
+            url: '/serviceManage/serverConfig/selectAll.do',
+            async: false,
+            data: JSON.stringify(postdata),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+              console.log(data.result)
+              that.tablelist = [...data.result.dataList];
+              console.log(that.data)
+              that.renderPage(serverIp,status,serverName,data.result.page.total_size, data.result.page.page_index)
+              // $('#result').text(data.result);
+            } // 注意不要在此行增加逗号
+          });
+        },
+        // 新增
+        addData(postdata) {
+          let that = this;
+          console.log('请求参数====》', postdata)
+          layui.$.ajax({
+            type: "post",
+            url: '/serviceManage/serverConfig/insert.do',
+            async: false,
+            data: JSON.stringify(postdata),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+              if(data.code == 1000){
+                layer.msg('新增成功');
+                that.getdata({});
+                layui.$('#addexample')[0].reset();
+                layui.form.render();
+                layer.closeAll();
+              }else{
+                layer.msg('新增失败:' + data.msg);
+              }
+            } // 注意不要在此行增加逗号
+          });
+        },
+        // 修改
+        editData(postdata) {
+          let that = this;
+          console.log('请求参数====》', postdata);
+          let postdatas = {
+            ...this.editdata,
+            ...postdata
+          }
+          layui.$.ajax({
+            type: "post",
+            url: '/serviceManage/serverConfig/update.do',
+            async: false,
+            data: JSON.stringify(postdatas),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+              if(data.code == 1000){
+                layer.msg('修改成功');
+                that.getdata({});
+                layui.$('#addexample')[0].reset();
+                layui.form.render();
+                layer.closeAll();
+              }else{
+                layer.msg('修改失败：' + data.msg);
+              }
+            } // 注意不要在此行增加逗号
+          });
+        },
+        // 删除
+        del(item) {
+          console.log(item);
+          let that = this;
+          let postdata = {
+            uuid: item.uuid
+          }
+          console.log('请求参数====》', postdata)
+          layui.$.ajax({
+            type: "post",
+            url: '/serviceManage/serverConfig/delete.do',
+            async: false,
+            data: JSON.stringify(postdata),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+              if(data.code == 1000){
+                layer.msg('删除成功');
+                that.getdata({});
+              }else{
+                layer.msg('删除失败：' + data.msg);
+              }
+            }
+          });
+        },
+        // 编辑
+        edit(item) {
+          let that = this;
+          this.editdata = { ...item };
+          layer.open({
+            type: 1,
+            title: "编辑",
+            area: ['500px', '480px'],
+            content: layui.$('#formexample'),
+            end: function () {
+              that.editdata = {};
+              // alert('这是点击任一按钮都会走的回调')
+            }
+          });
+          layui.use(['form', 'layedit', 'laydate'], function () {
+            var form = layui.form;
+            var data = form.val('addexample', {
+              ...item
+            });
+
+          })
+        },
+        detail(item) {
+          let that = this;
+          this.editdata = { ...item };
+          layer.open({
+            type: 1,
+            title: "详情",
+            area: ['500px', '480px'],
+            content: layui.$('#detailexample'),
+            end: function () {
+              that.editdata = {};
+              // alert('这是点击任一按钮都会走的回调')
+            }
+          });
+        },
+        // 渲染分页
+        renderPage(serverIp, status, serverName, count, curr) {
+          let that = this;
+          // 分页
+          layui.use(['laypage', 'layer'], function () {
+            var laypage = layui.laypage
+                    , layer = layui.layer;
+            //完整功能
+            laypage.render({
+              elem: 'demo7'
+              , count: count
+              , curr: curr
+              , theme: '#1E9FFF'
+              , layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+              , jump: function (obj, first) {
+                console.log(obj)
+                if (!first) {
+                  that.getdata({ serverIp: serverIp, status: status, serverName : serverName, page_index: obj.curr, page_size: obj.limit })
+                }
+              }
+            });
+          })
+        }
+      }
+    })
+    layui.use('element', function () {
+      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+      //监听导航点击
+      element.on('nav(demo)', function (elem) {
+        //console.log(elem)
+        layer.msg(elem.text());
+      });
+    });
+    layui.use(['form', 'layedit', 'laydate'], function () {
+      var form = layui.form;
+      //搜索表单取值
+      layui.$('#search').on('click', function () {
+        var data = form.val('example');
+        app.getdata({ ...data })
+        // alert(JSON.stringify(data));
+      });
+      layui.$("#reset").click(function () {
+        var data = form.val('example');
+        app.getdata({ ...data })
+      })
+
+      //监听提交
+      form.on('submit(addform)', function (data) {
+        console.log(data);
+        app.addData(data.field)
+        return false;
+      });
+      //监听提交
+      form.on('submit(editform)', function (data) {
+        console.log(data);
+        app.editData(data.field)
+        return false;
+      });
+    })
+
+    // 弹窗
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+      var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+      $('#addbtn').click(function () {
+        layui.$('#addexample')[0].reset();
+        layer.open({
+          type: 1,
+          title: "新增",
+          area: ['500px', '480px'],
+          content: $('#formexample'),
+          // btn: ['确定', '取消'],
+          yes: function (index) {
+            // alert("这是点击确定按钮走的回调")
+          },
+          btn2: function () {
+            // alert("这是点击取消按钮走的回调")
+          },
+          end: function () {
+            // alert('这是点击任一按钮都会走的回调')
+          }
+        });
+      })
+    });
+  </script>
+
+</body>
+</html>

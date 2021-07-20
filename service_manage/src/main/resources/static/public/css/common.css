@@ -1,0 +1,14 @@
+.ht-nav {
+    width: 300px;
+}
+body {
+    background-color: #efefef;
+}
+.whitebox {
+    background-color: white;
+    /* padding: 10px; */
+    padding-top: 21px;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding-bottom: 1px;
+}

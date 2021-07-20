@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件必须和相应的Dao接口文件同名，并在同一路径下 -->
+<mapper namespace="com.htinf.sm.dao.ServiceConfigDao">
+
+    <select id="selectAllServiceConfig" parameterType="com.htinf.sm.model.ServiceConfig"
+            resultType="com.htinf.sm.model.ServiceConfig">
+        SELECT
+            a.unid,
+            a.uuid,
+            a.serverUuid,
+            a.typeUuid,
+            b.serverName,
+            c.name AS typeName,
+            a.name,
+            a.serviceName,
+            a.port,
+            a.ifShow,
+            a.manageURL,
+            a.stateCommand,
+            a.jvmCommand,
+            a.installPath,
+            a.stopCommand,
+            a.startCommand,
+            a.restartCommand,
+            a.backupCommand,
+            a.targetPath,
+            a.logPath,
+            DATE_FORMAT(a.create_time,'%Y-%m-%d %H:%i:%s') AS create_time,
+            DATE_FORMAT(a.update_time,'%Y-%m-%d %H:%i:%s') AS update_time,
+            a.status
+        FROM
+            t_sm_service_config a
+        LEFT JOIN t_sm_server_config b ON a.serverUuid = b.uuid AND b.status = 0
+        LEFT JOIN t_sm_service_type c ON a.typeUuid = c.uuid AND c.status = 0
+        <where>
+            a.status != 2
+            <if test="unid != null and unid != '' ">
+                AND a.unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND a.uuid = #{uuid}
+            </if>
+            <if test="serverUuid != null and serverUuid != ''">
+                AND a.serverUuid = #{serverUuid}
+            </if>
+            <if test="typeUuid != null and typeUuid != ''">
+                AND a.typeUuid = #{typeUuid}
+            </if>
+            <if test="ifShow != null ">
+                AND a.ifShow = #{ifShow}
+            </if>
+            <if test="name != null and name != ''">
+                AND a.name like concat('%',#{name},'%')
+            </if>
+            <if test="serviceName != null and serviceName != ''">
+                AND a.serviceName = #{serviceName}
+            </if>
+            <if test="status != null ">
+                AND a.status = #{status}
+            </if>
+        </where>
+        ORDER BY a.unid DESC
+    </select>
+
+    <select id="selectServiceConfigDetail" parameterType="com.htinf.sm.model.ServiceConfig"
+            resultType="com.htinf.sm.model.ServiceConfig">
+        SELECT
+            a.unid,
+            a.uuid,
+            a.serverUuid,
+            a.typeUuid,
+            b.serverName,
+            c.name AS typeName,
+            a.name,
+            a.serviceName,
+            a.port,
+            a.ifShow,
+            a.manageURL,
+            a.stateCommand,
+            a.jvmCommand,
+            a.installPath,
+            a.stopCommand,
+            a.startCommand,
+            a.restartCommand,
+            a.backupCommand,
+            a.targetPath,
+            a.logPath,
+            DATE_FORMAT(a.create_time,'%Y-%m-%d %H:%i:%s') AS create_time,
+            DATE_FORMAT(a.update_time,'%Y-%m-%d %H:%i:%s') AS update_time,
+            a.status
+        FROM
+            t_sm_service_config a
+        LEFT JOIN t_sm_server_config b ON a.serverUuid = b.uuid AND b.status = 0
+        LEFT JOIN t_sm_service_type c ON a.typeUuid = c.uuid AND c.status = 0
+        <where>
+            a.status != 2
+            <if test="unid != null and unid != '' ">
+                AND a.unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND a.uuid = #{uuid}
+            </if>
+        </where>
+        ORDER BY a.unid DESC
+        LIMIT 1
+    </select>
+
+    <insert id="insertServiceConfig" parameterType="com.htinf.sm.model.ServiceConfig">
+        INSERT INTO t_sm_service_config
+        (
+            uuid,
+            serverUuid,
+            typeUuid,
+            name,
+            serviceName,
+            port,
+            ifShow,
+            manageURL,
+            stateCommand,
+            jvmCommand,
+            installPath,
+            stopCommand,
+            startCommand,
+            restartCommand,
+            backupCommand,
+            targetPath,
+            logPath,
+            status
+        )
+            VALUES
+        (
+            #{uuid},
+            #{serverUuid},
+            #{typeUuid},
+            #{name},
+            #{serviceName},
+            #{port},
+            #{ifShow},
+            #{manageURL},
+            #{stateCommand},
+            #{jvmCommand},
+            #{installPath},
+            #{stopCommand},
+            #{startCommand},
+            #{restartCommand},
+            #{backupCommand},
+            #{targetPath},
+            #{logPath},
+            #{status}
+        )
+    </insert>
+
+    <update id="deleteServiceConfig" parameterType="com.htinf.sm.model.ServiceConfig">
+        UPDATE t_sm_service_config SET status = 2 WHERE uuid = #{uuid}
+    </update>
+
+    <update id="updateServiceConfig" parameterType="com.htinf.sm.model.ServiceConfig">
+        UPDATE
+            t_sm_service_config
+        SET
+            serverUuid = #{serverUuid},
+            typeUuid = #{typeUuid},
+            name = #{name},
+            serviceName = #{serviceName},
+            port = #{port},
+            ifShow = #{ifShow},
+            manageURL = #{manageURL},
+            stateCommand = #{stateCommand},
+            jvmCommand = #{jvmCommand},
+            installPath = #{installPath},
+            stopCommand = #{stopCommand},
+            startCommand = #{startCommand},
+            restartCommand = #{restartCommand},
+            backupCommand = #{backupCommand},
+            targetPath = #{targetPath},
+            logPath = #{logPath},
+            status = #{status}
+        WHERE
+            uuid = #{uuid}
+    </update>
+
+    <select id="checkIsExists" parameterType="com.htinf.sm.model.ServiceConfig" resultType="com.htinf.sm.model.ServiceConfig">
+        SELECT uuid FROM t_sm_service_config WHERE serviceName = #{serviceName} AND status != 2 LIMIT 1
+    </select>
+
+</mapper>

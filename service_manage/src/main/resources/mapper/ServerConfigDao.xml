@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件必须和相应的Dao接口文件同名，并在同一路径下 -->
+<mapper namespace="com.htinf.sm.dao.ServerConfigDao">
+
+    <select id="selectAllServerConfig" parameterType="com.htinf.sm.model.ServerConfig" resultType="com.htinf.sm.model.ServerConfig">
+        SELECT
+            unid,
+            uuid,
+            serverName,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            type,
+            (case when type = 1 then '电话服务器' when type = 2 then '会见服务器' when type = 3 then '金融通服务器' when type = 4 then '安防服务器' when type = 5 then '监管通服务器' end) AS typeName,
+            sftpPort,
+            DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') AS create_time,
+            DATE_FORMAT(update_time,'%Y-%m-%d %H:%i:%s') AS update_time,
+            status
+        FROM
+            t_sm_server_config
+        <where>
+            status != 2
+            <if test="unid != null and unid != '' ">
+                AND unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND uuid = #{uuid}
+            </if>
+            <if test="serverName != null and serverName != ''">
+                AND serverName = #{serverName}
+            </if>
+            <if test="serverIp != null and serverIp != ''">
+                AND serverIp = #{serverIp}
+            </if>
+            <if test="userName != null and userName != ''">
+                AND userName = #{userName}
+            </if>
+            <if test="status != null ">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY unid DESC
+    </select>
+
+    <select id="selectServerConfigDetail" parameterType="com.htinf.sm.model.ServerConfig" resultType="com.htinf.sm.model.ServerConfig">
+        SELECT
+            unid,
+            uuid,
+            serverName,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            sftpPort,
+            type,
+            (case when type = 1 then '电话服务器' when type = 2 then '会见服务器' when type = 3 then '金融通服务器' when type = 4 then '安防服务器' when type = 5 then '监管通服务器' end) AS typeName,
+            DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') AS create_time,
+            DATE_FORMAT(update_time,'%Y-%m-%d %H:%i:%s') AS update_time,
+            status
+        FROM
+            t_sm_server_config
+        <where>
+            status != 2
+            <if test="unid != null and unid != '' ">
+                AND unid = #{unid}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                AND uuid = #{uuid}
+            </if>
+        </where>
+        ORDER BY unid DESC
+        LIMIT 1
+    </select>
+
+    <insert id="insertServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        INSERT INTO t_sm_server_config
+        (
+            uuid,
+            serverName,
+            serverIp,
+            userName,
+            password,
+            sshPort,
+            sftpPort,
+            type,
+            status
+        )
+            VALUES
+        (
+            #{uuid},
+            #{serverName},
+            #{serverIp},
+            #{userName},
+            #{password},
+            #{sshPort},
+            #{sftpPort},
+            #{type},
+            #{status}
+        )
+    </insert>
+
+    <update id="deleteServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        UPDATE t_sm_server_config SET status = 2 WHERE uuid = #{uuid}
+    </update>
+
+    <update id="updateServerConfig" parameterType="com.htinf.sm.model.ServerConfig">
+        UPDATE
+            t_sm_server_config
+        SET
+            serverName = #{serverName},
+            serverIp = #{serverIp},
+            userName = #{userName},
+            password = #{password},
+            sshPort = #{sshPort},
+            sftpPort = #{sftpPort},
+            type = #{type},
+            status = #{status}
+        WHERE
+            uuid = #{uuid}
+    </update>
+
+    <select id="checkIsExists" parameterType="com.htinf.sm.model.ServerConfig" resultType="com.htinf.sm.model.ServerConfig">
+        SELECT uuid FROM t_sm_server_config WHERE serverName = #{serverName} AND status != 2 LIMIT 1
+    </select>
+
+</mapper>

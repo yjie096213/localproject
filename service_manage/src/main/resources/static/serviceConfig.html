@@ -17,7 +17,7 @@
 <body>
 <div id="app" style="height: auto">
     <ul class="layui-nav layui-bg-blue" lay-bar="disabled">
-      <li class="layui-nav-item ht-nav"><a href="./form.html" style="color: #fff;font-size: 20px;">
+      <li class="layui-nav-item ht-nav"><a href="" style="color: #fff;font-size: 20px;">
           <img src="./public/img/logo.png" style="width: 38px;" alt="">
           服务管理后台
         </a>
@@ -26,8 +26,9 @@
       <li class="layui-nav-item"><a href="./serviceType.html">服务类型管理</a></li>
       <li class="layui-nav-item layui-this"><a href="./serviceConfig.html">服务管理</a></li>
       <li class="layui-nav-item"><a href="./deviceConfig.html">第三方设备</a></li>
+      <li class="layui-nav-item1"><a href="./disPlay.html">展示页面</a></li>
       <li class="layui-nav-item" style="float: right;">
-        <a href="javascript:;"><img src="./public/img/logo.png" class="layui-nav-img">上午好！admin</a>
+        <a href="javascript:;"><img src="./public/img/logo.png" class="layui-nav-img">你好！管理员</a>
         <dl class="layui-nav-child">
   <!--        <dd><a href="javascript:;">修改密码</a></dd>-->
           <hr>
@@ -248,16 +249,16 @@
           </div>
         </div>
         <div class="layui-form-item" style="margin-bottom: 5px;display:inline-block">
-          <label class="layui-form-label">服务日志地址：</label>
+          <label class="layui-form-label">服务日志文件：</label>
           <div class="layui-input-block">
-            <input type="text" name="logPath" autocomplete="off" placeholder="请输入服务日志地址"
+            <input type="text" name="logPath" autocomplete="off" placeholder="请输入服务日志文件"
                    class="layui-input" style="width: 240px;">
           </div>
         </div>
         <div class="layui-form-item" style="margin-bottom: 5px;display:inline-block">
-          <label class="layui-form-label">日志目标地址：</label>
+          <label class="layui-form-label">日志下载路径：</label>
           <div class="layui-input-block">
-            <input type="text" name="targetPath" autocomplete="off" placeholder="请输入日志目标地址"
+            <input type="text" name="targetPath" autocomplete="off" placeholder="请输入日志下载路径"
                    class="layui-input" style="width: 240px;">
           </div>
         </div>
@@ -325,10 +326,10 @@
           <div>服务备份命令：{{editdata.backupCommand}}</div>
         </div>
         <div class="layui-form-item">
-          <div>服务日志地址：{{editdata.logPath}}</div>
+          <div>服务日志文件：{{editdata.logPath}}</div>
         </div>
         <div class="layui-form-item">
-          <div>日志目标地址：{{editdata.targetPath}}</div>
+          <div>日志下载路径：{{editdata.targetPath}}</div>
         </div>
         <div class="layui-form-item">
           <div>创建时间：{{editdata.create_time}}</div>

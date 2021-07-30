@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+</head>
+
+<body>
+
+    <form action="/syn_old_data/syn/visitRecord" method="get" >
+        <div align="center" style="margin-top: 20px;">
+            <label>同步老系统会见数据</label>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">查询老系统会见数据sql：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="selectOldVisitRecord"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">插入新系统会见数据sql：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="insertVisitRecord"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div align="center" style="margin-top: 20px;">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+
+</html>

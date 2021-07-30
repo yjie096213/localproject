@@ -12,6 +12,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.SocketTimeoutException;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @ClassName: LogThread
@@ -33,6 +35,8 @@ public class LogThread extends Thread {
     private int port;
 
     private String command;
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     public LogThread(Session session, String userName, String password, String ip, int port, String command) {
         this.session = session;
@@ -62,7 +66,8 @@ public class LogThread extends Thread {
 
             Channel channel = sshSession.openChannel("exec");
             ChannelExec execChannel = (ChannelExec) channel;
-            execChannel.setCommand(command);
+            System.out.println(command + "_" + sdf.format(new Date()) + ".log");
+            execChannel.setCommand(command + "_" + sdf.format(new Date()) + ".log");
             InputStream in = null;
 
             try {
@@ -114,4 +119,5 @@ public class LogThread extends Thread {
             }
         }
     }
+
 }

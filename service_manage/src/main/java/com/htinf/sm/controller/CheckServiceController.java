@@ -102,6 +102,27 @@ public class CheckServiceController {
     }
 
     /**
+     * @MethodName:   executeRestartLinuxProcess
+     * @Description: TODO(描述这个方法的作用) 执行linux服务重启
+     * @Params:      [checkObject]
+     * @Return:      com.htinf.sm.common.model.ResultValue
+     * @DATE:        2021/7/7 14:48
+     * @Author:      Administrator
+     **/
+    @RequestMapping(value = "executeRestartLinuxProcess.do", method = RequestMethod.POST)
+    public ResultValue executeRestartLinuxProcess(@RequestBody CheckObject checkObject) {
+        ResultValue resultValue = checkObject.commandOtherVerification();
+        if (resultValue.getCode() != 1000){
+            return resultValue;
+        }
+        resultValue = checkObject.validateStringIndexOf(checkObject.getCommand());
+        if (resultValue.getCode() != 1000){
+            return resultValue;
+        }
+        return checkService.executeRestartLinuxProcess(checkObject);
+    }
+
+    /**
      * @MethodName:   startLinuxProcess
      * @Description: TODO(描述这个方法的作用) 启动linux服务进程
      * @Params:      [checkObject]
@@ -133,10 +154,6 @@ public class CheckServiceController {
     @RequestMapping(value = "downRemoteFile.do", method = RequestMethod.POST)
     public ResultValue downRemoteFile(@RequestBody CheckObject checkObject) {
         ResultValue resultValue = checkObject.fileVerification();
-        if (resultValue.getCode() != 1000){
-            return resultValue;
-        }
-        resultValue = checkObject.validateStringIndexOf(checkObject.getCommand());
         if (resultValue.getCode() != 1000){
             return resultValue;
         }

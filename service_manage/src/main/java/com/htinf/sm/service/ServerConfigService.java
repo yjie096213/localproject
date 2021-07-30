@@ -12,6 +12,7 @@ import com.htinf.sm.model.ServerConfig;
 import com.htinf.sm.model.ServiceConfig;
 import com.htinf.sm.model.ServiceType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -33,6 +34,9 @@ public class ServerConfigService {
 
     @Autowired
     private ServiceConfigDao serviceConfigDao;
+
+    @Value("${warnSize}")
+    private int warnSize;
 
     public Object selectAllServerConfig(ServerConfig serverConfig, Page page) {
         PageHelper.startPage(page.getPage_index(), page.getPage_size());
@@ -83,8 +87,10 @@ public class ServerConfigService {
     public List<ServerConfig> selectDisPlay(ServerConfig serverConfig) {
         List<ServerConfig> ServerConfigList = serverConfigDao.selectAllServerConfig(serverConfig);
         for(ServerConfig server : ServerConfigList == null ? new ArrayList<ServerConfig>() : ServerConfigList){
+            server.setWarnSize(warnSize);
             ServiceConfig serviceConfig = new ServiceConfig();
             serviceConfig.setServerUuid(server.getUuid());
+            serviceConfig.setIfShow(1);
             List<ServiceConfig> serviceConfigList = serviceConfigDao.selectAllServiceConfig(serviceConfig);
             server.setServiceConfigList(serviceConfigList);
         }

@@ -167,7 +167,7 @@ public class CheckService {
                 checkObject.getServiceIp(), checkObject.getServicePort(), checkObject.getCommand());
 
         if(null == result) {
-            // 执行失败
+            // 执行失败downRemoteFile
             checkObject.setStatus(1);
             checkObject.setStatusName("执行失败");
             checkObject.setResult("");
@@ -181,11 +181,44 @@ public class CheckService {
         return ResultValue.success(checkObject);
     }
 
+    public ResultValue executeRestartLinuxProcess(CheckObject checkObject) {
+
+        LinuxCommand.execCommand(checkObject.getUserName(), checkObject.getPassword(),
+                checkObject.getServiceIp(), checkObject.getServicePort(), "kill " + checkObject.getCommandOther());
+
+        String result1 = null;
+
+        String[] commands =  checkObject.getCommand().split("##");
+        for(String command : commands){
+            result1 = LinuxCommand.execCommand(checkObject.getUserName(), checkObject.getPassword(),
+                    checkObject.getServiceIp(), checkObject.getServicePort(), command);
+        }
+
+        if(null == result1) {
+            // 执行失败
+            checkObject.setStatus(1);
+            checkObject.setStatusName("执行失败");
+            checkObject.setResult("");
+        } else {
+            // 执行成功
+            checkObject.setStatus(0);
+            checkObject.setStatusName("执行成功");
+            checkObject.setResult(result1);
+        }
+
+        return ResultValue.success(checkObject);
+    }
+
     public ResultValue downRemoteFile(CheckObject checkObject) {
 
-        return LinuxCommand.downFile(checkObject.getUserName(), checkObject.getPassword(),
+        ResultValue resultValue = LinuxCommand.downFile(checkObject.getUserName(), checkObject.getPassword(),
                 checkObject.getServiceIp(), checkObject.getServicePort(), checkObject.getSourcePath(), checkObject.getTargetPath());
-
+        if(resultValue.getCode() == 1000){
+            checkObject.setStatus(0);
+            checkObject.setStatusName("执行成功");
+            checkObject.setResult(resultValue.getResult());
+        }
+        return ResultValue.success(checkObject);
     }
 
     public ResultValue checkDiskSize(CheckObject checkObject) {

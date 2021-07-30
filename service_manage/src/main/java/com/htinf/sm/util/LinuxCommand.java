@@ -46,6 +46,7 @@ public class LinuxCommand {
 
             InputStream in = null;
 
+
             try {
                 in = channel.getInputStream();
                 if(in != null) {
@@ -190,7 +191,7 @@ public class LinuxCommand {
                                        String sourcePath, String targetPath) {
 
         Connection conn = null;
-        ResultValue resultValue = new ResultValue(6000, "", "下载失败");
+            ResultValue resultValue = new ResultValue(6000, "", "下载失败");
 
         try {
             conn = new Connection(ip,port);
@@ -200,14 +201,18 @@ public class LinuxCommand {
                 return resultValue;
             }
 
-            //下载文件到本地
+            //下载文件到本地0
             SCPClient scpClient = conn.createSCPClient();
             SCPInputStream scpis = scpClient.get(sourcePath);
 
-            //判断指定目录是否存在，不存在则先创建目录
-            File file = new File(targetPath.substring(0, targetPath.lastIndexOf("/") + 1));
+            File file = new File(targetPath);
             if (!file.exists()) {
                 file.mkdirs();
+            }
+
+            //判断指定目录是否存在，不存在则先创建目录
+            if(sourcePath.indexOf("/") > -1){
+                targetPath = targetPath + sourcePath.substring(sourcePath.lastIndexOf("/"));
             }
 
             FileOutputStream fos = new FileOutputStream(targetPath);
@@ -228,7 +233,7 @@ public class LinuxCommand {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (null != conn) {
+                if (null != conn) {
                 conn.close();
             }
         }

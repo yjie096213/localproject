@@ -34,6 +34,9 @@ public class CheckObject implements Serializable {
     /*执行命令*/
     private String command;
 
+    /*执行命令commandOther*/
+    private String commandOther;
+
     /*源文件地址*/
     private String sourcePath;
 
@@ -105,6 +108,20 @@ public class CheckObject implements Serializable {
         return rst;
     }
 
+    /*commandOther*/
+    public ResultValue commandOtherVerification(){
+        ResultValue rst = ResultValue.success();
+        Validator.validateNotEmpty(rst, this, new String[] {
+                "serviceIp",
+                "servicePort",
+                "userName",
+                "password",
+                "command",
+                "commandOther",
+        });
+        return rst;
+    }
+
     public ResultValue validateStringIndexOf(String value){
         ResultValue rst = ResultValue.success();
         Validator.validateStringIndexOf(rst, value, new String[] {
@@ -128,6 +145,14 @@ public class CheckObject implements Serializable {
 
     public void setCommand(String command) {
         this.command = command;
+    }
+
+    public String getCommandOther() {
+        return commandOther;
+    }
+
+    public void setCommandOther(String commandOther) {
+        this.commandOther = commandOther;
     }
 
     public String getSourcePath() {

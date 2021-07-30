@@ -56,6 +56,9 @@ public class ServerConfig extends BaseObject {
     /*数据状态*/
     private Integer status;
 
+    /*报警临界值*/
+    private int warnSize;
+
     private long getUnid() {
         return unid;
     }
@@ -204,5 +207,13 @@ public class ServerConfig extends BaseObject {
 
     public void setServiceConfigList(List<ServiceConfig> serviceConfigList) {
         this.serviceConfigList = serviceConfigList;
+    }
+
+    public int getWarnSize() {
+        return warnSize;
+    }
+
+    public void setWarnSize(int warnSize) {
+        this.warnSize = warnSize;
     }
 }

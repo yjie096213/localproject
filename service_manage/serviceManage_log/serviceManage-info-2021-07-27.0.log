@@ -1,0 +1,458 @@
+2021-07-27 10:14:17.968 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:14:18.006 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 17032 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:14:18.007 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:14:19.601 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:14:19.606 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:14:19.663 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:14:21.218 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:14:21.237 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:14:21.239 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 10:14:21.239 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 10:14:21.367 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:14:21.369 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 10:14:21.370 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:14:21.405 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 10:15:45.651 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:15:45.693 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 15736 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:15:45.693 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:15:47.298 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:15:47.304 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:15:47.335 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:15:48.641 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:15:48.661 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:15:48.662 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 10:15:48.663 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 10:15:48.751 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:15:48.751 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 10:15:48.753 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:15:48.788 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 10:16:10.487 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:16:10.533 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 19976 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:16:10.533 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:16:11.900 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:16:11.907 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:16:11.940 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:16:13.314 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:16:13.336 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:13.337 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 10:16:13.337 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 10:16:13.435 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:13.435 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 10:16:13.437 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:13.464 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 10:16:55.297 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:16:55.339 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 10600 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:16:55.339 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:16:56.634 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:16:56.638 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:16:56.685 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:16:57.903 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:16:57.918 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:57.919 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 10:16:57.920 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 10:16:58.011 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:58.011 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 10:16:58.012 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:16:58.041 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 10:17:11.212 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:17:11.247 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 19768 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:17:11.248 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:17:12.623 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:17:12.629 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:17:12.658 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:17:13.903 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:17:33.690 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 10:17:33.725 [main] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication v0.0.1-SNAPSHOT using Java 1.8.0_261 on abc-PC with PID 10340 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\server_manage-0.0.1-SNAPSHOT.jar started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 10:17:33.726 [main] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 10:17:35.043 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 10:17:35.047 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 10:17:35.076 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-07-27 10:17:36.295 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 10:17:36.311 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:17:36.312 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 10:17:36.312 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 10:17:36.428 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 10:17:36.429 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2600 ms
+2021-07-27 10:17:36.480 [main] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 10:17:36.480 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 10:17:37.506 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 10:17:38.298 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 10:17:38.354 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 10:17:38.368 [main] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.302 seconds (JVM running for 5.888)
+2021-07-27 10:17:44.175 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 10:17:44.176 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 10:17:44.178 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 10:17:44.561 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 10:17:45.525 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 10:19:18.442 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-07-27 10:19:18.453 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-07-27 11:51:49.563 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 11:51:49.594 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 17600 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 11:51:49.594 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 11:51:49.688 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 11:51:49.688 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 11:51:50.694 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 11:51:50.698 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 11:51:50.739 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2021-07-27 11:51:52.126 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 11:51:52.145 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 11:51:52.146 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 11:51:52.147 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 11:51:52.293 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 11:51:52.294 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2606 ms
+2021-07-27 11:51:52.339 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 11:51:52.340 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 11:51:53.140 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 11:51:53.868 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 11:51:53.910 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 11:51:53.935 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 11:51:53.948 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.116 seconds (JVM running for 5.885)
+2021-07-27 11:51:54.676 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 11:51:54.676 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 11:51:54.677 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 11:51:55.115 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 11:51:55.876 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:12:47.808 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:12:47.837 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 7456 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:12:47.838 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:12:47.953 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:12:47.953 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:12:48.938 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:12:48.943 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:12:49.004 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:12:50.272 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:12:50.285 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:12:50.286 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:12:50.286 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:12:50.410 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:12:50.410 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2456 ms
+2021-07-27 17:12:50.460 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:12:50.460 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:12:51.181 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:12:51.943 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:12:51.972 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:12:51.992 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:12:52.003 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 4.911 seconds (JVM running for 5.629)
+2021-07-27 17:12:58.781 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:12:58.782 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:12:58.783 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:12:59.148 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:12:59.758 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:20:22.558 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:20:22.587 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14784 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:20:22.588 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:20:22.710 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:20:22.710 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:20:23.741 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:20:23.744 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:20:23.777 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:20:24.998 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:20:25.014 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:20:25.015 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:20:25.016 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:20:25.169 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:20:25.169 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2458 ms
+2021-07-27 17:20:25.221 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:20:25.221 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:20:26.159 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:20:27.417 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:20:27.465 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:20:27.488 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:20:27.503 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.663 seconds (JVM running for 6.355)
+2021-07-27 17:20:51.985 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:20:51.986 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:20:51.987 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:20:52.297 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:20:52.947 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:21:07.023 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:21:07.076 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 12880 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:21:07.077 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:21:07.243 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:21:07.244 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:21:08.191 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:21:08.194 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:21:08.232 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:21:09.337 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:21:09.352 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:21:09.353 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:21:09.354 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:21:09.472 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:21:09.472 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2227 ms
+2021-07-27 17:21:09.507 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:21:09.507 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:21:10.520 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:21:11.608 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:21:11.645 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:21:11.673 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:21:11.691 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.417 seconds (JVM running for 6.708)
+2021-07-27 17:21:13.633 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:21:13.634 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:21:13.635 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:21:13.949 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:21:14.576 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:29:27.685 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:29:27.716 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 11484 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:29:27.717 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:29:27.835 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:29:27.835 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:29:28.793 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:29:28.798 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:29:28.855 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:29:30.382 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:29:30.401 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:29:30.402 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:29:30.402 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:29:30.598 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:29:30.599 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2763 ms
+2021-07-27 17:29:30.662 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:29:30.663 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:29:31.707 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:29:32.455 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:29:32.485 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:29:32.506 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:29:32.519 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.521 seconds (JVM running for 6.6)
+2021-07-27 17:29:41.187 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:29:41.187 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:29:41.188 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:29:41.547 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:29:42.258 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:37:41.274 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-07-27 17:37:41.306 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-07-27 17:37:41.530 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 11484 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:37:41.531 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:37:41.934 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:37:41.934 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:37:41.937 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:37:42.117 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:37:42.118 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:37:42.119 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:37:42.119 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:37:42.156 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:37:42.156 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 622 ms
+2021-07-27 17:37:42.180 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:37:42.183 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:37:42.429 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:37:42.525 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 17:37:42.538 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 17:37:45.185 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 11484 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:37:45.185 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:37:45.480 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:37:45.480 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:37:45.489 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:37:45.601 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:37:45.602 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:37:45.603 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:37:45.603 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:37:45.622 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:37:45.622 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 433 ms
+2021-07-27 17:37:45.641 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:37:45.642 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:37:45.823 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:37:45.900 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:37:45.906 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:37:45.909 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:37:45.913 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 0.824 seconds (JVM running for 499.974)
+2021-07-27 17:37:45.915 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-07-27 17:37:51.772 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:37:51.773 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:37:51.774 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:39:42.408 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:39:42.439 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 10924 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:39:42.440 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:39:42.519 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:39:42.520 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:39:43.469 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:39:43.473 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:39:43.508 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:39:44.856 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:39:44.872 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:39:44.873 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:39:44.874 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:39:45.044 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:39:45.045 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2524 ms
+2021-07-27 17:39:45.098 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:39:45.099 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:39:46.094 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:39:46.914 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:39:46.948 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:39:46.972 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:39:46.986 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.338 seconds (JVM running for 6.426)
+2021-07-27 17:39:49.160 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:39:49.161 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:39:49.162 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:39:49.460 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:39:50.073 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:40:37.291 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:40:37.312 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14696 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:40:37.313 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:40:37.408 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:40:37.408 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:40:38.441 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:40:38.445 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:40:38.487 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:40:39.952 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:40:39.969 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:40:39.971 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:40:39.971 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:40:40.119 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:40:40.120 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2711 ms
+2021-07-27 17:40:40.192 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:40:40.193 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:40:41.342 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:40:42.095 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:40:42.124 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:40:42.145 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:40:42.156 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.587 seconds (JVM running for 6.778)
+2021-07-27 17:41:26.095 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:41:26.119 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14396 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:41:26.120 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:41:26.229 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:41:26.230 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:41:27.129 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:41:27.132 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:41:27.164 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:41:28.338 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:41:28.353 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:41:28.354 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:41:28.355 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:41:28.474 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:41:28.475 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2245 ms
+2021-07-27 17:41:28.515 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:41:28.516 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:41:29.205 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:41:30.086 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:41:30.116 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:41:30.138 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:41:30.153 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 4.739 seconds (JVM running for 5.392)
+2021-07-27 17:41:30.299 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:41:30.300 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:41:30.301 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:41:30.746 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:41:31.496 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:42:55.201 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:42:55.225 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 17276 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:42:55.226 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:42:55.361 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:42:55.361 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:42:56.312 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:42:56.317 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:42:56.356 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:42:58.041 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:42:58.058 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:42:58.060 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:42:58.060 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:42:58.192 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:42:58.192 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2830 ms
+2021-07-27 17:42:58.243 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:42:58.243 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:42:59.048 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:42:59.788 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:42:59.815 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:42:59.838 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:42:59.852 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.331 seconds (JVM running for 6.004)
+2021-07-27 17:43:02.536 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:43:02.536 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:43:02.538 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-07-27 17:43:02.786 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:43:03.713 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:44:46.307 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:44:46.328 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 2968 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:44:46.329 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:44:46.474 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:44:46.475 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:44:47.484 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:44:47.488 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:44:47.525 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:44:49.043 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:44:49.058 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:44:49.059 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:44:49.060 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:44:49.175 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:44:49.175 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2699 ms
+2021-07-27 17:44:49.217 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:44:49.218 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:44:49.942 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:44:50.678 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:44:50.707 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:44:50.737 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:44:50.751 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 5.139 seconds (JVM running for 5.831)
+2021-07-27 17:45:01.238 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:45:01.239 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:45:01.240 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-07-27 17:45:01.514 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:45:02.112 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:45:55.096 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.13.Final
+2021-07-27 17:45:55.120 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14876 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:45:55.121 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:45:55.238 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-27 17:45:55.240 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-27 17:45:56.281 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:45:56.286 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:45:56.322 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:45:57.523 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:45:57.536 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:45:57.537 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:45:57.537 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:45:57.655 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:45:57.655 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2414 ms
+2021-07-27 17:45:57.703 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:45:57.703 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:45:58.414 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:45:59.172 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:45:59.200 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:45:59.219 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:45:59.229 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 4.899 seconds (JVM running for 5.857)
+2021-07-27 17:46:05.285 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 17:46:05.285 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-27 17:46:05.287 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-07-27 17:46:05.545 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-07-27 17:46:06.176 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-07-27 17:46:43.738 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-07-27 17:46:43.962 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-07-27 17:46:44.387 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14876 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:46:44.387 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:46:44.890 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:46:44.891 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:46:44.893 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:46:45.111 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:46:45.113 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:46:45.114 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:46:45.114 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:46:45.150 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:46:45.151 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 759 ms
+2021-07-27 17:46:45.170 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:46:45.171 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:46:45.433 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:46:45.503 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-07-27 17:46:45.511 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-27 17:46:48.253 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Starting ServiceManageApplication using Java 1.8.0_261 on abc-PC with PID 14876 (F:\Program Files\sourcecode\ivms6.0\service_manage\target\classes started by abc in F:\Program Files\sourcecode\ivms6.0\service_manage)
+2021-07-27 17:46:48.253 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - No active profile set, falling back to default profiles: default
+2021-07-27 17:46:49.483 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-27 17:46:49.484 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-27 17:46:49.493 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-07-27 17:46:49.773 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-07-27 17:46:49.773 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:46:49.774 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-27 17:46:49.774 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-27 17:46:49.806 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/serviceManage] - Initializing Spring embedded WebApplicationContext
+2021-07-27 17:46:49.806 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1543 ms
+2021-07-27 17:46:49.829 [restartedMain] INFO  org.apache.catalina.core.StandardContext - Suspicious URL pattern: [*.min.js] in context [/serviceManage], see sections 12.1 and 12.2 of the Servlet specification
+2021-07-27 17:46:49.829 [restartedMain] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet dispatcherServlet was not registered (possibly already registered?)
+2021-07-27 17:46:50.419 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-07-27 17:46:50.625 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-07-27 17:46:50.634 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-07-27 17:46:50.781 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/serviceManage'
+2021-07-27 17:46:50.797 [restartedMain] INFO  com.htinf.sm.ServiceManageApplication - Started ServiceManageApplication in 2.617 seconds (JVM running for 57.422)
+2021-07-27 17:46:50.815 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

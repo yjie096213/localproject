@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件必须和相应的Dao接口文件同名，并在同一路径下 -->
+<mapper namespace="com.yj.mybatis_plus.mapper.StudentMapper">
+
+    <select id="selectAll"  parameterType="com.yj.mybatis_plus.model.Student" resultType="com.yj.mybatis_plus.model.Student">
+        SELECT
+            id AS id,
+            age AS age,
+            name AS name,
+            no
+        FROM
+            student
+        <where>
+        <if test="name != null and name != ''">
+            name = #{name}
+        </if>
+        <if test="id != null and id != ''">
+            id = #{id}
+        </if>
+        </where>
+    </select>
+</mapper>
